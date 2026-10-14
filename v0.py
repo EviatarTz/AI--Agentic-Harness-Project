@@ -1,4 +1,5 @@
 import sys 
+import openai
 
 sys.stdout.reconfigure(encoding = 'utf-8') #so emojis don't crush the windows console 
 
