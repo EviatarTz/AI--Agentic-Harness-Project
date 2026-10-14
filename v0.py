@@ -1,5 +1,4 @@
 import sys 
-import openai
 
 sys.stdout.reconfigure(encoding = 'utf-8') #so emojis don't crush the windows console 
 
@@ -12,7 +11,7 @@ MODEL = "qwen3.5:4b"
 def chat(user_message: str) -> str:
     response = client.chat.completions.create(
         model = MODEL,
-        message = [
+        messages = [
             {"role": "system", "content" :"You are a helpful personal assistant."},
             {"role": "user", "content": user_message},  
         ],
